@@ -9,7 +9,7 @@ import { payneuPaymentABI } from 'src/utils/payneu-payment/payneu-payment-abi';
 import { walletClient } from 'src/utils/rpc-client/wallet-client';
 import { parseEther } from 'viem';
 
-const { PAYMENT_CONTRACT, WALLET_ADMIN, PUBKEY_ADMIN, TOKEN_BAZED } =
+const { PAYMENT_CONTRACT, WALLET_ADMIN, PUBKEY_ADMIN, TOKEN_BAZED, CLOB_API } =
   process.env;
 
 const safeJSONStringify = (value: any): string => {
@@ -207,7 +207,7 @@ export class PaymentService {
     );
     stringifiedParams = stringifiedParams.replace('"YYY"', 100000000000000000);
 
-    const response = await fetch('http://localhost:3001/order/baze-musd', {
+    const response = await fetch(`${CLOB_API}/order/baze-musd`, {
       headers: {
         'Content-Type': 'application/json',
       },
