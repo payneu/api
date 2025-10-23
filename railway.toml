@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "yarn build"
+buildCommand = "pnpm build"
 
 [deploy]
 startCommand = "npm run start"
