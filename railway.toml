@@ -2,6 +2,9 @@
 builder = "NIXPACKS"
 buildCommand = "yarn build"
 
+[build.nixpacksPlan.phases.setup]
+nixPkgs = ["nodejs-22_x"]
+
 [deploy]
 startCommand = "npm run start"
 healthcheckPath = "/health"
