@@ -1,6 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "pnpm build"
+buildCommand = "pnpm prisma:generate && pnpm build"
 
 [deploy]
 startCommand = "npm run start"
