@@ -26,7 +26,7 @@ const safeJSONStringify = (value: any): string => {
 
 @Injectable()
 export class PaymentService {
-  constructor(private readonly invoiceService: InvoiceService) {}
+  constructor(private readonly invoiceService: InvoiceService) { }
 
   create(createPaymentDto: CreatePaymentDto) {
     return 'This action adds a new payment';
@@ -216,7 +216,7 @@ export class PaymentService {
     });
     const responseData = await response.json();
 
-    // console.log('responseData', responseData);
+    console.log('responseData', responseData);
     // wait for confirmations
     await pubClient.waitForTransactionReceipt({
       hash: responseData.txHash,

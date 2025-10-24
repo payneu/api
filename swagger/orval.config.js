@@ -6,7 +6,7 @@ module.exports = {
       target: 'payneu-api.ts',
       client: 'swr',
       httpClient: 'fetch',
-      baseUrl: 'http://localhost:3000'
+      baseUrl: 'https://api-production-d10d.up.railway.app'
     },
   },
 };
